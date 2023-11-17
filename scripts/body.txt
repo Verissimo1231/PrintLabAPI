@@ -1,0 +1,44 @@
+
+{
+  "email": "pedro2407@gmail",
+  "senha": "1234"
+}
+
+{
+  "nome": "",
+  "email": "",
+  "senha": ""
+}
+
+{
+  "minimo":"",
+  "maximo":"",
+  "crossdoking":"",
+  "localizacao":"",
+  "quantidade":"",
+  "obs":""
+}
+
+{
+  "produto":"",
+  "img": ""
+}
+
+{
+  "nome": "Teste2", 
+  "categoria": 1,
+  "avaliacao": 1,
+  "preco": 999.99,
+  "unidade": 1,
+  "condicao": "Suave",
+  "marca": "Testosterona",
+  "producao": "2020-04-22",
+  "validade": "2025-12-09",
+  "frete": 1,
+  "peso": 1,
+  "largura": 1,
+  "altura": 1,
+  "profundidade": 1,
+  "volume": 1,
+  "descricao": "Produto Teste 2"
+}
