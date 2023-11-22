@@ -18,7 +18,7 @@ try{
         erro: 'Ocorreu um erro'
     });
 }
-})
+});
 
 
 endpoits.put('/produto/:id', async (req,resp) => {
@@ -26,21 +26,28 @@ endpoits.put('/produto/:id', async (req,resp) => {
     let id = req.params.id;
     let r = await alterarProduto(id, produto);
     resp.send();
-})
+});
 
 
 endpoits.delete('/produto/:id', async (req,resp) => {
     let id = req.params.id;
     let r = deletarProduto(id);
     resp.send();
-})
+});
+
+
+endpoits.get('/produto/busca', async (req,resp) => {
+    let {nome} = req.query;
+    let r = consultarProduto(nome);
+    resp.send(r);
+});
 
 
 endpoits.get('/produto', async (req,resp) => {
-    let busca = req.query.busca;
-    let r = consultarProduto(busca);
+    let {id} = req.query;
+    let r = consultarProduto(id);
     resp.send(r);
-})
+});
 
 
 endpoits.put('/produto/:id/imagem', upload.single('imagem'), async (req,resp) =>{
@@ -57,7 +64,7 @@ try{
         erro: 'Ocorreu um erro'
     });
 }
-})
+});
 
 
 export default endpoits;

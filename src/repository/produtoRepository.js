@@ -25,12 +25,21 @@ export async function inserirImagem(imagem, id){
 }
 
 
-export async function consultarProduto(id,nome){
+export async function consultarProduto(nome){
     const comando =
-        `select * from tb_produto where id_produto = ? or nm_produto like ?`;
+        `select * from tb_produto where nm_produto like ?`;
 
-    const [resp] = await con.query(comando,['%'+id+'%', '%'+nome+'%']);
+    const [resp] = await con.query(comando,[`%${nome}`]);
     return resp;
+}
+
+
+export async function consultarProduto2(id){
+    const comando =
+        `select * from tb_produto where id_produto = ?`;
+
+    const [resp] = await con.query(comando,[id]);
+    return resp[0];
 }
 
 
